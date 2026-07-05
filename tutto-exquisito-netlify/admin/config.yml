@@ -22,7 +22,7 @@ backend:
   # gateway_url: https://gateway.decapbridge.com
 
 # Required by Decap even if you don't upload images yet
-media_folder: "tutto-exquisite-netlify/images/uploads"
+media_folder: "tutto-exquisito-netlify/images/uploads"
 public_folder: "/images/uploads"
 
 # Optional: adds a "Save draft -> Review -> Publish" workflow
@@ -40,7 +40,7 @@ collections:
       # ------------------------------------------------------
       - name: "menu"
         label: "Menu (drinks & food)"
-        file: "tutto-exquisite-netlify/content/menu.json"
+        file: "tutto-exquisito-netlify/content/menu.json"
         format: "json"
         fields:
           - label: "Categories"
@@ -97,7 +97,7 @@ collections:
       # ------------------------------------------------------
       - name: "hours"
         label: "Shop Hours"
-        file: "tutto-exquisite-netlify/content/hours.json"
+        file: "tutto-exquisito-netlify/content/hours.json"
         format: "json"
         fields:
           - label: "Summary line"
@@ -129,7 +129,7 @@ collections:
       # ------------------------------------------------------
       - name: "announcement"
         label: "Announcement Banner"
-        file: "tutto-exquisite-netlify/content/announcement.json"
+        file: "tutto-exquisito-netlify/content/announcement.json"
         format: "json"
         fields:
           - label: "Show the banner?"
@@ -159,7 +159,7 @@ collections:
       # ------------------------------------------------------
       - name: "settings"
         label: "Business Settings"
-        file: "tutto-exquisite-netlify/content/settings.json"
+        file: "tutto-exquisito-netlify/content/settings.json"
         format: "json"
         fields:
           - label: "Phone number"
