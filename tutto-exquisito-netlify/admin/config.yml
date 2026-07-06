@@ -91,6 +91,13 @@ collections:
                     required: false
                     default: ""
                     hint: "If set, tapping this item opens the link (e.g. the Starbucks menu). Leave empty for a normal item."
+                  - label: "Photo (optional)"
+                    name: "image"
+                    widget: "image"
+                    required: false
+                    default: ""
+                    choose_url: false
+                    hint: "A photo of this dish, shown at the top of its menu card. Use JPG or PNG under 1 MB — leave empty for a text-only card."
 
       # ------------------------------------------------------
       # SHOP HOURS  ->  content/hours.json
