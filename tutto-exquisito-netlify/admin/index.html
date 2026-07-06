@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>Tutto Exquisito — Savor the World | Coffee Shop in Kissimmee, FL</title>
+<meta name="description" content="Tutto Exquisito is a boutique café inside Magic Moment Resort, Kissimmee — proudly serving Starbucks, Argentine empanadas, gourmet croissants and paninis. Open daily 7 AM–9 PM.">
+<!-- Netlify Identity: enables the admin dashboard login system -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Bodoni+Moda:opsz,ital,wght@6..96,1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Tutto Exquisito",
+  "description": "Boutique café inside Magic Moment Resort proudly serving Starbucks drinks, Argentine empanadas, gourmet croissants and paninis. Open to the public.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "5200 W Irlo Bronson Memorial Hwy",
+    "addressLocality": "Kissimmee",
+    "addressRegion": "FL",
+    "postalCode": "34746",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "07:00",
+    "closes": "21:00"
+  },
+  "priceRange": "$$",
+  "servesCuisine": ["Coffee", "Cafe", "Argentine", "Bakery"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "56"
+  }
+}
+</script>
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#171110;
+  --card:#241A16;
+  --card-2:#2E211C;
+  --ink:#F6EFE4;
+  --muted:#CDBFB1;
+  --red:#E04853;
+  --red-btn:#B01E2A;
+  --red-btn-hover:#C92835;
+  --gold:#E8C57E;
+  --hairline:rgba(246,239,228,.14);
+  --radius:18px;
+  --shadow:0 20px 50px -20px rgba(0,0,0,.6);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:#171110}
+body{
+  font-family:'Jost',sans-serif;
+  font-weight:400;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.eyebrow{
+  font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  font-weight:600;color:var(--red);
+}
+h1,h2,h3{font-family:'Bodoni Moda',serif;font-weight:600;line-height:1.05;letter-spacing:-.01em;color:var(--ink)}
+
+/* ---------- Announcement banner ---------- */
+.announce{
+  display:none;position:relative;z-index:60;
+  background:var(--gold);color:#2B1D18;
+  padding:10px 48px 10px 20px;text-align:center;
+  font-size:14.5px;font-weight:500;
+}
+.announce.show{display:block}
+.announce a{
+  display:inline-block;margin-left:10px;font-weight:600;
+  color:#2B1D18;text-decoration:underline;text-underline-offset:3px;
+}
+.announce-close{
+  position:absolute;right:10px;top:50%;transform:translateY(-50%);
+  background:none;border:none;font-size:18px;line-height:1;
+  color:#2B1D18;cursor:pointer;padding:6px;
+}
+
+/* ---------- Map embed & phone ---------- */
+.map-wrap{position:relative;margin-top:18px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--hairline)}
+.map-embed{width:100%;height:260px;border:0;display:block;filter:saturate(.9)}
+.map-fallback{
+  position:absolute;inset:0;display:none;
+  align-items:center;gap:16px;padding:24px;
+  background:var(--card-2);color:var(--ink);text-decoration:none;
+}
+.map-wrap.no-map .map-embed{display:none}
+.map-wrap.no-map .map-fallback{display:flex}
+.map-pin{font-size:34px;flex:none}
+.map-fallback strong{font-size:17px}
+.map-fallback .map-cta{color:var(--gold);font-weight:600;display:inline-block;margin-top:8px}
+.map-fallback:hover .map-cta{text-decoration:underline}
+.phone-link{
+  display:inline-flex;align-items:center;gap:8px;margin-top:14px;
+  font-size:17px;font-weight:600;color:var(--ink);text-decoration:none;
+  border-bottom:2px solid var(--gold);padding-bottom:2px;
+}
+.phone-link:hover{color:var(--gold)}
+.foot a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--hairline)}
+.foot a:hover{border-color:var(--gold);color:var(--gold)}
+.hidden{display:none !important}
+
+/* ---------- Nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(23,17,16,.92);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--hairline);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--red-btn);color:#FFF9EF;
+  display:grid;place-items:center;
+  font-family:'Bodoni Moda',serif;font-size:18px;font-weight:700;
+}
+.brand-name{font-family:'Bodoni Moda',serif;font-size:19px;font-weight:600;color:var(--ink)}
+.nav-links{display:flex;gap:28px;align-items:center;list-style:none}
+.nav-links a{text-decoration:none;font-size:15px;font-weight:500;color:var(--ink);opacity:.9;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px 26px;border-radius:999px;
+  font-family:'Jost',sans-serif;font-size:15px;font-weight:600;letter-spacing:.02em;
+  text-decoration:none;cursor:pointer;border:none;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.btn-primary{background:var(--red-btn);color:#FFF9EF;box-shadow:0 10px 24px -10px rgba(176,30,42,.7)}
+.btn-primary:hover{background:var(--red-btn-hover);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid rgba(246,239,228,.55)}
+.btn-ghost:hover{background:var(--ink);color:#1A1210;border-color:var(--ink)}
+.btn-sm{padding:10px 20px;font-size:14px}
+.menu-toggle{display:none;background:none;border:none;font-size:26px;cursor:pointer;color:var(--ink)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;padding:84px 0 72px}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(600px 400px at 85% 10%, rgba(232,197,126,.10), transparent 65%),
+    radial-gradient(700px 500px at -5% 90%, rgba(224,72,83,.10), transparent 60%);
+  pointer-events:none;
+}
+.hero-in{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(44px,6.5vw,78px);margin:18px 0 10px;color:var(--ink)}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--red)}
+.hero-sub{font-size:19px;font-weight:400;color:var(--muted);max-width:52ch;margin-bottom:28px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.hero-meta{display:flex;gap:26px;flex-wrap:wrap;align-items:center}
+.meta-item{display:flex;flex-direction:column;gap:2px}
+.meta-item strong{font-size:17px;font-weight:600;color:var(--ink)}
+.meta-item span{font-size:13px;color:var(--muted);letter-spacing:.04em}
+.stars{color:var(--gold);letter-spacing:2px}
+.hero-card{
+  position:relative;background:var(--card);border-radius:26px;
+  box-shadow:var(--shadow);padding:36px 32px;
+  border:1px solid var(--hairline);
+}
+.hero-card::before{
+  content:"";position:absolute;inset:10px;border-radius:18px;
+  border:1px solid rgba(232,197,126,.4);pointer-events:none;
+}
+.hero-card .eyebrow{color:var(--gold)}
+.open-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(224,72,83,.16);color:#FF9AA1;
+  border-radius:999px;padding:7px 16px;font-size:13px;font-weight:600;letter-spacing:.05em;
+  margin:14px 0 20px;
+}
+.open-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero-card h3{font-size:26px;margin-bottom:6px}
+.hero-card p{font-size:15px;color:var(--muted)}
+.hero-card ul{list-style:none;margin-top:18px;display:grid;gap:12px}
+.hero-card li{display:flex;gap:12px;font-size:15px;align-items:flex-start;color:var(--ink)}
+.tick{
+  flex:none;width:20px;height:20px;border-radius:50%;margin-top:2px;
+  background:var(--red-btn);color:#FFF9EF;font-size:11px;
+  display:grid;place-items:center;
+}
+
+/* ---------- Ticker ---------- */
+.ticker{background:var(--red-btn);color:#FFF9EF;overflow:hidden;padding:14px 0}
+.ticker-track{display:flex;gap:0;width:max-content;animation:scroll 30s linear infinite}
+.ticker span{
+  font-family:'Bodoni Moda',serif;font-style:italic;font-size:16px;
+  padding:0 28px;white-space:nowrap;display:flex;align-items:center;gap:28px;color:#FFF9EF;
+}
+.ticker span::after{content:"✦";font-style:normal;font-size:11px;color:var(--gold)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){
+  .ticker-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}
+  .reveal{opacity:1 !important;transform:none !important}
+  .open-badge .dot{animation:none}
+}
+
+/* ---------- Sections ---------- */
+section{padding:88px 0}
+section[id],aside[id]{scroll-margin-top:84px}
+.sec-head{max-width:640px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(32px,4.5vw,48px);margin-top:14px}
+.sec-head p{margin-top:12px;color:var(--muted);font-size:17px;font-weight:400}
+
+/* ---------- Highlights ---------- */
+.high-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.high{
+  background:var(--card);border:1px solid var(--hairline);border-radius:var(--radius);
+  padding:30px 26px;transition:transform .25s ease, box-shadow .25s ease;
+}
+.high:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.high .glyph{font-size:28px;margin-bottom:14px}
+.high h3{font-size:20px;margin-bottom:8px}
+.high p{font-size:14.5px;color:var(--muted)}
+
+/* ---------- Menu ---------- */
+.menu-sec{background:#100B09;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
+.menu-sec .eyebrow{color:var(--gold)}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:44px}
+.tab{
+  background:transparent;color:var(--ink);border:1.5px solid rgba(246,239,228,.5);
+  border-radius:999px;padding:11px 24px;font-family:'Jost',sans-serif;
+  font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  cursor:pointer;transition:all .2s ease;
+}
+.tab:hover{border-color:var(--gold);color:var(--gold)}
+.tab[aria-selected="true"]{background:var(--gold);border-color:var(--gold);color:#2B1D18}
+.panel{display:none;animation:fadeUp .45s ease}
+.panel.active{display:grid;grid-template-columns:1fr 1fr;gap:14px 56px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.dish{padding:22px 0;border-bottom:1px solid rgba(246,239,228,.14)}
+.dish-img{
+  width:100%;height:170px;object-fit:cover;display:block;
+  border-radius:calc(var(--radius) - 6px);margin-bottom:14px;
+  border:1px solid var(--hairline);
+}
+.dish-top{display:flex;align-items:baseline;gap:12px}
+.dish h3{font-size:21px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dish h3 small{font-family:'Jost',sans-serif;font-size:13px;font-weight:400;color:var(--muted);letter-spacing:.04em}
+.leader{flex:1;border-bottom:1px dotted rgba(232,197,126,.5);transform:translateY(-5px)}
+.price{font-family:'Bodoni Moda',serif;font-size:20px;color:var(--gold);white-space:nowrap}
+.dish p{margin-top:8px;font-size:14.5px;font-weight:400;color:var(--muted);max-width:46ch}
+.dish-link{display:block;text-decoration:none;color:inherit;transition:opacity .2s ease}
+.dish-link:hover{opacity:.75}
+.dish-link .price{color:var(--gold)}
+.badge{
+  display:inline-block;margin-top:10px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);border:1px solid rgba(232,197,126,.55);border-radius:999px;padding:4px 12px;
+}
+.menu-note{
+  margin-top:34px;padding:26px 30px;border-radius:var(--radius);
+  background:rgba(232,197,126,.1);border:1px solid rgba(232,197,126,.35);
+  display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:space-between;
+}
+.menu-note p{font-size:15.5px;max-width:56ch;color:var(--ink)}
+.menu-note strong{font-weight:600;color:var(--gold)}
+
+/* ---------- Reviews ---------- */
+.rev-score{display:flex;align-items:baseline;gap:14px;margin-top:14px}
+.rev-score .num{font-family:'Bodoni Moda',serif;font-size:64px;line-height:1;color:var(--red)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.rev{
+  background:var(--card);border:1px solid var(--hairline);border-radius:var(--radius);
+  padding:32px 28px;position:relative;display:flex;flex-direction:column;
+}
+.rev::before{
+  content:"\201C";position:absolute;top:8px;right:22px;
+  font-family:'Bodoni Moda',serif;font-size:88px;line-height:1;color:rgba(224,72,83,.22);
+}
+.rev p{font-size:15.5px;flex:1;color:var(--ink)}
+.rev .stars{font-size:14px;margin-bottom:14px}
+.rev footer{margin-top:22px;display:flex;flex-direction:column;gap:2px}
+.rev footer strong{font-weight:600;font-size:15px;color:var(--ink)}
+.rev footer span{font-size:13px;color:var(--muted);letter-spacing:.05em}
+
+/* ---------- Visit / Contact ---------- */
+.visit{background:var(--card);border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
+.visit-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start}
+.info-block+.info-block{margin-top:34px;padding-top:34px;border-top:1px solid var(--hairline)}
+.info-block h3{font-size:23px;margin-bottom:12px}
+.info-block p{color:var(--muted);font-size:15.5px}
+.info-block .big{font-size:19px;color:var(--ink);font-weight:500}
+.chip-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.chip{
+  font-size:13.5px;font-weight:500;letter-spacing:.03em;color:var(--ink);
+  background:var(--bg);border:1px solid var(--hairline);
+  border-radius:999px;padding:8px 16px;display:inline-flex;align-items:center;gap:7px;
+}
+.chip::before{content:"✓";color:var(--red);font-weight:700;font-size:12px}
+.hours-card{
+  background:var(--card-2);border:1px solid var(--hairline);border-radius:22px;
+  padding:36px 32px;position:sticky;top:96px;box-shadow:var(--shadow);
+}
+.hours-card .eyebrow{color:var(--gold)}
+.hours-card h3{font-size:24px}
+.hours-row{
+  display:flex;justify-content:space-between;padding:12px 0;
+  border-bottom:1px dotted rgba(246,239,228,.25);font-size:15.5px;color:var(--ink);
+}
+.hours-row span:last-child{font-weight:600}
+.hours-card .fine{font-size:12.5px;color:var(--muted);margin-top:14px}
+.hours-card .btn{width:100%;margin-top:22px}
+.hours-card .btn+.btn{margin-top:10px}
+
+/* ---------- CTA / Footer ---------- */
+.cta{
+  background:linear-gradient(140deg,#A11824 0%,#7E0F18 100%);
+  color:#FFF9EF;text-align:center;
+}
+.cta h2{font-size:clamp(34px,5vw,56px);color:#FFF9EF}
+.cta h2 em{font-style:italic;font-weight:400;color:var(--gold)}
+.cta p{max-width:52ch;margin:16px auto 34px;font-weight:400;font-size:17px;color:#FFEFE0}
+.cta .btn-primary{background:#FFF9EF;color:#A11824;box-shadow:none}
+.cta .btn-primary:hover{background:#FFFFFF}
+.cta .btn-ghost{border-color:rgba(255,249,239,.7);color:#FFF9EF}
+.cta .btn-ghost:hover{background:rgba(255,249,239,.15);color:#FFFFFF;border-color:#FFF9EF}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.foot{background:#100B09;color:var(--muted);padding:44px 0;font-size:14px;border-top:1px solid var(--hairline)}
+.foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot .brand-name{color:var(--ink)}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media (max-width:920px){
+  .hero-in{grid-template-columns:1fr;gap:44px}
+  .high-grid{grid-template-columns:1fr 1fr}
+  .panel.active{grid-template-columns:1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .visit-grid{grid-template-columns:1fr;gap:44px}
+  .hours-card{position:static}
+}
+@media (max-width:680px){
+  section{padding:64px 0}
+  .hero{padding:56px 0 52px}
+  .nav-links{
+    display:none;position:absolute;top:68px;left:0;right:0;
+    background:#1D1512;border-bottom:1px solid var(--hairline);
+    flex-direction:column;gap:0;padding:8px 0;
+  }
+  .nav-links.open{display:flex}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:14px 24px}
+  .nav-links .btn{margin:10px 24px 14px;width:calc(100% - 48px)}
+  .menu-toggle{display:block}
+  .high-grid{grid-template-columns:1fr}
+  .dish h3{white-space:normal}
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT (content/announcement.json) -->
+<div class="announce" id="announceBar" role="region" aria-label="Announcement">
+  <span id="announceText"></span><a id="announceLink" class="hidden" href="#" target="_blank" rel="noopener"></a>
+  <button class="announce-close" id="announceClose" aria-label="Dismiss announcement">✕</button>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Tutto Exquisito home">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">Tutto Exquisito</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn btn-primary btn-sm" href="#order">Order now</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <p class="eyebrow">Inside Magic Moment Resort · Kissimmee, Florida</p>
+      <h1>Savor <em>the World,</em><br>one cup at a time.</h1>
+      <p class="hero-sub">A boutique café bringing together gourmet treasures from different cultures — proudly serving the full Starbucks drink menu alongside Argentine empanadas, buttery croissants and artisan paninis. Open to the public.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#order">Order pickup or delivery</a>
+        <a class="btn btn-ghost" href="#menu">Explore the menu</a>
+      </div>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <strong><span class="stars">★★★★★</span> 4.8</strong>
+          <span>56 Google reviews</span>
+        </div>
+        <div class="meta-item">
+          <strong>$10–20</strong>
+          <span>Per person</span>
+        </div>
+        <div class="meta-item">
+          <strong>7 AM – 9 PM</strong>
+          <span>Open daily</span>
+        </div>
+      </div>
+    </div>
+
+    <aside class="hero-card reveal">
+      <p class="eyebrow">Why guests love it</p>
+      <div class="open-badge"><span class="dot"></span><span id="hoursSummary">Open daily · 7 AM – 9 PM</span></div>
+      <h3>High-end atmosphere, everyday prices</h3>
+      <p>A quiet, cozy corner of the resort — perfect for breakfast, lunch, or working on your laptop.</p>
+      <ul>
+        <li><span class="tick">✓</span>Full Starbucks drink menu, proudly served</li>
+        <li><span class="tick">✓</span>Great coffee, desserts &amp; tea selection</li>
+        <li><span class="tick">✓</span>Free parking lot &amp; free street parking</li>
+        <li><span class="tick">✓</span>Fully wheelchair accessible · Free Wi-Fi</li>
+        <li><span class="tick">✓</span>Dine-in · Takeout · Delivery · Curbside</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span>Proudly Serving Starbucks</span>
+    <span>Argentine Empanadas</span>
+    <span>Fresh-Baked Croissants</span>
+    <span>Artisan Paninis</span>
+    <span>Dulce de Leche</span>
+    <span>Great Tea Selection</span>
+    <span>Kids' Menu</span>
+    <span>Free Wi-Fi</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The Tutto experience</p>
+      <h2>A little escape, right off Irlo Bronson.</h2>
+      <p>Tucked inside a boutique resort just minutes from the parks — and open to everyone.</p>
+    </div>
+    <div class="high-grid">
+      <article class="high reveal">
+        <div class="glyph">☕</div>
+        <h3>Great coffee</h3>
+        <p>Every Starbucks favorite — lattes, frappuccinos, refreshers and iced teas — crafted with care.</p>
+      </article>
+      <article class="high reveal">
+        <div class="glyph">🥐</div>
+        <h3>Baked fresh</h3>
+        <p>Golden croissants, alfajores and desserts guests call some of the best around Orlando.</p>
+      </article>
+      <article class="high reveal">
+        <div class="glyph">💻</div>
+        <h3>Work-friendly</h3>
+        <p>Quiet, cozy and trendy — with free Wi-Fi, comfortable seating and plenty of outlets for laptop days.</p>
+      </article>
+      <article class="high reveal">
+        <div class="glyph">👨‍👩‍👧</div>
+        <h3>Family welcome</h3>
+        <p>A kids' menu, easy free parking and a relaxed vibe where families and friends make memories.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MENU (rendered from content/menu.json) -->
+<section class="menu-sec" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The menu</p>
+      <h2>Gourmet treasures from different cultures.</h2>
+      <p>Breakfast and lunch, brunch and dessert — served with passion and artistry.</p>
+    </div>
+
+    <!-- Tabs and dishes are built by JavaScript from content/menu.json -->
+    <div class="tabs" id="menuTabs" role="tablist" aria-label="Menu categories"></div>
+    <div id="menuPanels"></div>
+
+    <div class="menu-note reveal">
+      <p><strong>Good to know:</strong> walk-ins only — no reservations needed. Kids' menu available. Dine-in, takeout, curbside pickup and delivery.</p>
+      <a class="btn btn-primary btn-sm" href="#order">Order online</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Guest reviews</p>
+      <h2>&ldquo;A gem in Orlando.&rdquo;</h2>
+      <div class="rev-score">
+        <span class="num">4.8</span>
+        <div>
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <p style="font-size:14px;color:var(--muted)">Based on 56 Google reviews</p>
+        </div>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <article class="rev reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>Wow, this is a gem in Orlando. They have all the drinks but with more variety of food — empanadas, croissant sandwiches and sweets. The ambience and the service are amazing. My new favorite place.</p>
+        <footer><strong>María C.</strong><span>Google review</span></footer>
+      </article>
+      <article class="rev reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>Very beautiful and welcoming environment! Loved the coffee, and the workers were so kind and helpful.</p>
+        <footer><strong>Kristalle T.</strong><span>Google review</span></footer>
+      </article>
+      <article class="rev reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>Very clean and nice atmosphere, good customer service — and I really liked the chicken empanada I got.</p>
+        <footer><strong>Ira C.</strong><span>Local Guide · Google review</span></footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="visit" id="contact">
+  <div class="wrap visit-grid">
+    <div>
+      <div class="sec-head reveal" style="margin-bottom:38px">
+        <p class="eyebrow">Plan your visit</p>
+        <h2>Easy to find. Easy to love.</h2>
+      </div>
+
+      <div class="info-block reveal">
+        <h3>Location</h3>
+        <p class="big">5200 W Irlo Bronson Memorial Hwy,<br>Kissimmee, FL 34746</p>
+        <p>Inside Magic Moment Resort — open to resort guests <em>and</em> the public. Just minutes from the theme parks.</p>
+        <a class="phone-link hidden" id="phoneLink" href="#">📞 <span id="phoneText"></span></a>
+        <div class="map-wrap">
+          <iframe class="map-embed" id="mapEmbed" title="Map to Tutto Exquisito"
+            src="https://www.google.com/maps?q=5200+W+Irlo+Bronson+Memorial+Hwy,+Kissimmee,+FL+34746&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <a class="map-fallback" id="mapFallback"
+            href="https://www.google.com/maps/search/?api=1&query=Tutto+Exquisito+5200+W+Irlo+Bronson+Memorial+Hwy+Kissimmee+FL+34746"
+            target="_blank" rel="noopener">
+            <span class="map-pin">📍</span>
+            <span>
+              <strong>Tutto Exquisito</strong><br>
+              5200 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746<br>
+              <span class="map-cta">Open in Google Maps →</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="info-block reveal">
+        <h3>Parking &amp; accessibility</h3>
+        <div class="chip-row">
+          <span class="chip">Free parking lot</span>
+          <span class="chip">Free street parking</span>
+          <span class="chip">Wheelchair accessible entrance</span>
+          <span class="chip">Accessible parking</span>
+          <span class="chip">Accessible restroom</span>
+          <span class="chip">Accessible seating</span>
+        </div>
+      </div>
+
+      <div class="info-block reveal">
+        <h3>Amenities &amp; service</h3>
+        <div class="chip-row">
+          <span class="chip">Free Wi-Fi</span>
+          <span class="chip">Outdoor seating</span>
+          <span class="chip">Restrooms</span>
+          <span class="chip">Kids' menu</span>
+          <span class="chip">Dine-in</span>
+          <span class="chip">Takeout</span>
+          <span class="chip">Curbside pickup</span>
+          <span class="chip">Delivery</span>
+        </div>
+      </div>
+
+      <div class="info-block reveal">
+        <h3>Payments</h3>
+        <div class="chip-row">
+          <span class="chip">Credit cards</span>
+          <span class="chip">Debit cards</span>
+          <span class="chip">Apple Pay &amp; NFC mobile pay</span>
+        </div>
+      </div>
+    </div>
+
+    <aside class="hours-card reveal" id="order">
+      <p class="eyebrow">Hours &amp; ordering</p>
+      <h3 style="margin:10px 0 18px" id="hoursHeading">Open daily, 7 AM – 9 PM</h3>
+      <div id="hoursRows">
+        <div class="hours-row"><span>Monday</span><span>7 AM – 9 PM</span></div>
+        <div class="hours-row"><span>Tuesday</span><span>7 AM – 9 PM</span></div>
+        <div class="hours-row"><span>Wednesday</span><span>7 AM – 9 PM</span></div>
+        <div class="hours-row"><span>Thursday</span><span>7 AM – 9 PM</span></div>
+        <div class="hours-row"><span>Friday</span><span>7 AM – 9 PM</span></div>
+        <div class="hours-row"><span>Saturday</span><span>7 AM – 9 PM</span></div>
+        <div class="hours-row"><span>Sunday</span><span>7 AM – 9 PM</span></div>
+      </div>
+      <p class="fine" id="hoursNote">Holiday hours may differ.</p>
+      <a class="btn btn-primary js-directions" href="https://www.google.com/maps/search/?api=1&query=Tutto+Exquisito+5200+W+Irlo+Bronson+Memorial+Hwy+Kissimmee+FL+34746" target="_blank" rel="noopener">Get directions</a>
+      <a class="btn btn-ghost js-order" href="https://www.google.com/maps/search/?api=1&query=Tutto+Exquisito+Kissimmee+order" target="_blank" rel="noopener">Order pickup or delivery</a>
+    </aside>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Your table is <em>waiting.</em></h2>
+    <p>Skip the theme-park lines for breakfast. Golden croissants, Argentine empanadas and your favorite Starbucks drink — served with passion and artistry.</p>
+    <div class="cta-btns">
+      <a class="btn btn-primary js-order" href="https://www.google.com/maps/search/?api=1&query=Tutto+Exquisito+Kissimmee+order" target="_blank" rel="noopener">Order online</a>
+      <a class="btn btn-ghost js-directions" href="https://www.google.com/maps/search/?api=1&query=Tutto+Exquisito+5200+W+Irlo+Bronson+Memorial+Hwy+Kissimmee+FL+34746" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="brand">
+      <span class="brand-mark">T</span>
+      <span class="brand-name">Tutto Exquisito</span>
+    </div>
+    <p>5200 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746 · Inside Magic Moment Resort</p>
+    <p><a id="instaLink" class="hidden" href="#" target="_blank" rel="noopener">Instagram</a><span id="instaDot" class="hidden"> · </span>Savor the World ✦ Proudly Serving Starbucks</p>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   1. SMOOTH-SCROLL NAVIGATION
+   preventDefault() runs FIRST so the browser never treats
+   the tap as page navigation — it only scrolls.
+   ========================================================= */
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href^="#"]');
+  if (!link) return;
+
+  e.preventDefault();                       // stop navigation immediately
+
+  const id = link.getAttribute('href');
+  if (id.length < 2) return;                // ignore bare "#"
+
+  const target = document.querySelector(id);
+  if (!target) return;
+
+  target.scrollIntoView({
+    behavior: prefersReduced ? 'auto' : 'smooth',
+    block: 'start'
+  });
+
+  // Close the mobile menu if it's open
+  const navLinksEl = document.getElementById('navLinks');
+  const toggleEl = document.getElementById('menuToggle');
+  if (navLinksEl.classList.contains('open')) {
+    navLinksEl.classList.remove('open');
+    toggleEl.textContent = '☰';
+    toggleEl.setAttribute('aria-expanded', 'false');
+  }
+});
+
+/* =========================================================
+   2. MENU LOADED FROM content/menu.json  (Decap CMS edits this)
+   - fetch() pulls the JSON file
+   - renderMenu() builds the tabs + dish cards
+   - MENU_FALLBACK keeps the page working if the file
+     can't load (e.g. opening the HTML directly from disk)
+   ========================================================= */
+const MENU_FALLBACK = {
+  categories: [
+    { id:"empanadas", label:"Empanadas", items:[
+      { name:"Beef Empanada", subtitle:"", description:"Hand-folded Argentine-style empanada filled with savory seasoned beef, baked golden. A local favorite.", price:"$4.99", badge:"Local favorite", link:"" },
+      { name:"Chicken Empanada", subtitle:"", description:"Hand-folded Argentine-style empanada filled with tender seasoned chicken, baked golden.", price:"$4.99", badge:"", link:"" },
+      { name:"Ham and Cheese Empanada", subtitle:"", description:"Flaky baked empanada filled with savory ham and melted cheese.", price:"$4.99", badge:"", link:"" }
+    ]},
+    { id:"croissants", label:"Croissants", items:[
+      { name:"Croissant Royale", subtitle:"Ham & Provolone", description:"Flaky, buttery croissant filled with savory ham and melted provolone cheese, baked to golden perfection.", price:"$7.50", badge:"", link:"" },
+      { name:"Croissant Bellissimo", subtitle:"Brie & Prosciutto", description:"Buttery croissant layered with creamy brie cheese, delicate prosciutto and sweet peach jam, finished with a touch of elegance in every bite.", price:"$7.50", badge:"Guest favorite", link:"" },
+      { name:"Croissant Capri", subtitle:"Caprese", description:"Fresh mozzarella, ripe tomato, basil pesto and balsamic glaze on a golden croissant.", price:"$7.50", badge:"Vegetarian", link:"" },
+      { name:"Croissant Sunrise", subtitle:"Egg, Bacon & Cheese", description:"Buttery croissant filled with fluffy scrambled eggs, crispy bacon and melted cheese for the perfect morning indulgence.", price:"$7.50", badge:"Breakfast pick", link:"" },
+      { name:"Plain Croissant", subtitle:"", description:"Simple, buttery and baked golden — lovely with any coffee.", price:"$4.00", badge:"", link:"" },
+      { name:"Dulce de Leche Croissant", subtitle:"", description:"Drizzled with icing and almonds, filled with silky dulce de leche.", price:"$2.50", badge:"", link:"" }
+    ]},
+    { id:"paninis", label:"Paninis, Flatbreads & Toasts", items:[
+      { name:"Panini Classico", subtitle:"Ham, Cheese & Butter", description:"Warm ciabatta bread pressed to perfection, filled with savory ham, creamy melted cheese and a touch of rich butter.", price:"$7.50", badge:"", link:"" },
+      { name:"Panini Capri", subtitle:"Caprese", description:"Fresh mozzarella, ripe tomato slices, fragrant basil pesto and a drizzle of balsamic glaze pressed inside golden ciabatta bread.", price:"$9.50", badge:"Vegetarian", link:"" },
+      { name:"Panini Toscana", subtitle:"Honey Mustard Chicken", description:"Grilled chicken breast, tangy honey mustard, melted provolone cheese and fresh mixed greens pressed in artisanal ciabatta bread.", price:"$11.50", badge:"", link:"" },
+      { name:"Flatbread Caesar", subtitle:"Grilled Chicken", description:"Warm flatbread filled with tender grilled chicken breast, crisp lettuce, shaved parmesan and creamy Caesar dressing for a fresh, flavorful bite.", price:"$9.90", badge:"", link:"" },
+      { name:"Avocado Elegance", subtitle:"", description:"Whole avocado, half smashed and half sliced, served on artisanal toast with boiled egg, fresh arugula, everything-bagel seeds and a drizzle of rich balsamic glaze.", price:"$9.90", badge:"Vegetarian", link:"" }
+    ]},
+    { id:"pizza", label:"Pizza", items:[
+      { name:"Pizza Classica", subtitle:"Cheese", description:"Simple yet irresistible — crispy flatbread with velvety tomato sauce and a generous layer of melted mozzarella cheese.", price:"$10.99", badge:"Vegetarian", link:"" },
+      { name:"Pizza Diavolo", subtitle:"Pepperoni", description:"Golden flatbread layered with rich tomato sauce, creamy mozzarella and spicy pepperoni slices for a bold, classic flavor.", price:"$11.99", badge:"", link:"" },
+      { name:"Pizza Parma", subtitle:"Prosciutto & Arugula", description:"Crisp flatbread topped with fresh mozzarella, savory prosciutto, peppery arugula and a drizzle of rich balsamic glaze over tomato sauce.", price:"$12.99", badge:"", link:"" },
+      { name:"Pizza Argentina", subtitle:"Ham, Egg & Corn", description:"A hearty flatbread with tomato sauce, melted mozzarella, tender ham, sliced boiled egg and sweet golden corn for a true South American touch.", price:"$11.99", badge:"", link:"" }
+    ]},
+    { id:"mains", label:"Mains & Salads", items:[
+      { name:"Tutto Burguer", subtitle:"", description:"Our signature house burger with melted cheddar, crispy bacon, pickles and fresh greens on a toasted brioche bun, served with seasoned fries.", price:"$12.99", badge:"Signature", link:"" },
+      { name:"Cesar Royale", subtitle:"", description:"Crisp romaine lettuce tossed with grilled chicken, crispy bacon, shaved parmesan and crunchy croutons, finished with our signature Caesar dressing.", price:"$12.99", badge:"", link:"" },
+      { name:"Mediterranean Bloom", subtitle:"", description:"A vibrant mix of fresh greens, strawberries, cherry tomatoes, feta, toasted almonds and balsamic glaze — light, bright and refreshing.", price:"$13.99", badge:"Vegetarian", link:"" }
+    ]},
+    { id:"smoothies", label:"Smoothies", items:[
+      { name:"Strawberry Banana Smoothie", subtitle:"", description:"A creamy blend of ripe strawberries and banana. Add a scoop of whey protein for +$1.25.", price:"$7.99", badge:"", link:"" },
+      { name:"Wild Berries Smoothie", subtitle:"", description:"Blackberry, blueberry and mixed berries blended smooth and topped with cream. Add a scoop of whey protein for +$1.25.", price:"$7.99", badge:"", link:"" },
+      { name:"Tropical Smoothie", subtitle:"", description:"Mango, pineapple and coconut blended into a creamy tropical escape.", price:"$7.99", badge:"", link:"" },
+      { name:"Pina Colada Smoothie", subtitle:"", description:"Pineapple and coconut blended into a smooth, refreshing classic.", price:"$7.99", badge:"", link:"" }
+    ]},
+    { id:"desserts", label:"Desserts & Sips", items:[
+      { name:"Starbucks Drinks", subtitle:"", description:"Proudly serving Starbucks — espresso, frappuccinos, refreshers, iced teas and seasonal favorites. Tap to view the full Starbucks menu.", price:"View menu", badge:"", link:"https://www.starbucks.com/menu" },
+      { name:"Red Velvet Cake", subtitle:"", description:"Moist crimson sponge layered with smooth cream cheese frosting, offering a perfect balance of sweetness and a hint of cocoa.", price:"$10.00", badge:"", link:"" },
+      { name:"Limoncello Cake", subtitle:"", description:"Light and airy lemon sponge cake infused with fresh limoncello, layered with silky cream and topped with candied lemon slices.", price:"$10.00", badge:"", link:"" },
+      { name:"Chocolate Tuxedo Bombe", subtitle:"", description:"A show-stopping chocolate sphere with silky chocolate mousse, finished with elegant white chocolate drizzle.", price:"$10.00", badge:"", link:"" },
+      { name:"Chocolate Mousse Cake", subtitle:"", description:"Layers of cookies-and-cream mousse over a chocolate base, topped with crunchy Oreo pieces for a delightful texture.", price:"$10.00", badge:"", link:"" },
+      { name:"Lemon Berry Cream Mascarpone", subtitle:"", description:"Delicate layers of lemon and berry cream mascarpone with white chocolate curls — bright, creamy and elegant.", price:"$10.00", badge:"", link:"" },
+      { name:"Carrot Cake", subtitle:"", description:"Moist layers of spiced carrot cake with a hint of walnuts, topped with creamy orange cream cheese frosting and candied carrot shavings.", price:"$4.50", badge:"", link:"" },
+      { name:"Gluten-Free Chocolate Cake", subtitle:"", description:"Rich and indulgent chocolate cake made without gluten, featuring a moist texture and deep cocoa flavor, finished with a smooth chocolate frosting.", price:"$5.50", badge:"Gluten-free", link:"" },
+      { name:"Red Mickey Mouse Macarons", subtitle:"", description:"Delicate almond meringue cookies shaped like iconic character faces, with a silky red raspberry ganache filling.", price:"$4.50", badge:"", link:"" },
+      { name:"Green Dubai Mickey Mouse Macarons", subtitle:"", description:"Whimsical pistachio-flavored character macarons with a delicate pistachio cream center.", price:"$4.50", badge:"", link:"" },
+      { name:"Oreo Mickey Mouse Macarons", subtitle:"", description:"Character-shaped macarons with a smooth cookies-and-cream filling for a playful, indulgent treat.", price:"$4.50", badge:"", link:"" },
+      { name:"Argentine Alfajor – Chocolate", subtitle:"", description:"Traditional Argentine shortbread cookie filled with creamy dulce de leche and coated in rich chocolate.", price:"$3.00", badge:"", link:"" },
+      { name:"Argentine Alfajor – White Chocolate", subtitle:"", description:"Classic Argentine shortbread cookie with smooth dulce de leche filling, enrobed in silky white chocolate.", price:"$3.00", badge:"", link:"" },
+      { name:"Blueberry Muffin", subtitle:"", description:"Tender muffin bursting with plump blueberries, baked until golden with a perfect crumb.", price:"$3.50", badge:"", link:"" },
+      { name:"Corn Muffin", subtitle:"", description:"Soft and fluffy golden muffin infused with sweet vanilla, offering a delicate aroma and classic flavor in every bite.", price:"$3.50", badge:"", link:"" },
+      { name:"Chocolate Muffin", subtitle:"", description:"Rich and decadent muffin loaded with chocolate throughout, offering deep cocoa satisfaction.", price:"$3.50", badge:"", link:"" },
+      { name:"Banana Nut Muffin", subtitle:"", description:"Classic muffin made with ripe bananas and toasted nuts for a warm, comforting flavor.", price:"$3.00", badge:"", link:"" },
+      { name:"Forks, Cups or Plates", subtitle:"", description:"Extra serviceware for sharing back at your room or picnic table.", price:"$1.50", badge:"", link:"" }
+    ]}
+  ]
+};
+
+// Escape user-editable text before inserting it into HTML
+function esc(str){
+  return String(str ?? '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+function renderMenu(data){
+  const tabsEl = document.getElementById('menuTabs');
+  const panelsEl = document.getElementById('menuPanels');
+  tabsEl.innerHTML = '';
+  panelsEl.innerHTML = '';
+
+  data.categories.forEach((cat, i) => {
+    // Tab button
+    const tab = document.createElement('button');
+    tab.className = 'tab';
+    tab.setAttribute('role','tab');
+    tab.id = 'tab-' + cat.id;
+    tab.setAttribute('aria-controls','panel-' + cat.id);
+    tab.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+    tab.textContent = cat.label;
+    tabsEl.appendChild(tab);
+
+    // Panel of dishes
+    const panel = document.createElement('div');
+    panel.className = 'panel' + (i === 0 ? ' active' : '');
+    panel.id = 'panel-' + cat.id;
+    panel.setAttribute('role','tabpanel');
+    panel.setAttribute('aria-labelledby','tab-' + cat.id);
+    if (i !== 0) panel.hidden = true;
+
+    panel.innerHTML = cat.items.map(item => {
+      const inner = `
+        ${item.image ? '<img class="dish-img" src="' + esc(item.image) + '" alt="' + esc(item.name) + '" loading="lazy" onerror="this.remove()">' : ''}
+        <div class="dish-top">
+          <h3>${esc(item.name)}${item.subtitle ? ' <small>' + esc(item.subtitle) + '</small>' : ''}</h3>
+          <span class="leader"></span>
+          <span class="price">${esc(item.price)}${item.link ? ' ↗' : ''}</span>
+        </div>
+        ${item.description ? '<p>' + esc(item.description) + '</p>' : ''}
+        ${item.badge ? '<span class="badge">' + esc(item.badge) + '</span>' : ''}
+      `;
+      return item.link
+        ? `<a class="dish dish-link" href="${esc(item.link)}" target="_blank" rel="noopener">${inner}</a>`
+        : `<article class="dish">${inner}</article>`;
+    }).join('');
+
+    panelsEl.appendChild(panel);
+  });
+
+  // Tab switching
+  const tabs = [...tabsEl.querySelectorAll('.tab')];
+  const panels = [...panelsEl.querySelectorAll('.panel')];
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.setAttribute('aria-selected','false'));
+      panels.forEach(p => { p.classList.remove('active'); p.hidden = true; });
+      tab.setAttribute('aria-selected','true');
+      const panel = document.getElementById(tab.getAttribute('aria-controls'));
+      panel.hidden = false;
+      panel.classList.add('active');
+    });
+  });
+}
+
+async function loadMenu(){
+  try {
+    const res = await fetch('content/menu.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    renderMenu(data);
+  } catch (err) {
+    // File missing or opened from disk — use the built-in copy
+    console.info('Menu file not found — showing built-in menu. This is normal until all folders are uploaded together.');
+    renderMenu(MENU_FALLBACK);
+  }
+}
+loadMenu();
+
+/* Shop hours loaded from content/hours.json (Decap CMS edits this) */
+async function loadHours(){
+  try {
+    const res = await fetch('content/hours.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+
+    if (data.summary) {
+      document.getElementById('hoursSummary').textContent = data.summary;
+      document.getElementById('hoursHeading').textContent = data.summary.replace(' · ', ', ');
+    }
+    document.getElementById('hoursNote').textContent = data.note || '';
+
+    if (Array.isArray(data.days) && data.days.length) {
+      document.getElementById('hoursRows').innerHTML = data.days.map(d => `
+        <div class="hours-row"><span>${esc(d.day)}</span><span>${esc(d.hours)}</span></div>
+      `).join('');
+    }
+  } catch (err) {
+    // File missing or opened from disk — the HTML fallback stays visible
+    console.info('Hours file not found — showing built-in hours. This is normal until all folders are uploaded together.');
+  }
+}
+loadHours();
+
+/* Announcement banner from content/announcement.json */
+const ANNOUNCE_FALLBACK = {
+  enabled: true,
+  text: "🍰 New desserts just added — try our Chocolate Tuxedo Bombe, Argentine Alfajors, and gourmet macarons!",
+  link_label: "",
+  link_url: ""
+};
+
+function showAnnouncement(data){
+  if (!data.enabled || !data.text) return;
+  // Stay hidden this visit if the guest dismissed it already
+  if (sessionStorage.getItem('announceDismissed') === data.text) return;
+
+  document.getElementById('announceText').textContent = data.text;
+  const link = document.getElementById('announceLink');
+  if (data.link_label && data.link_url) {
+    link.textContent = data.link_label;
+    link.href = data.link_url;
+    link.classList.remove('hidden');
+  }
+  document.getElementById('announceBar').classList.add('show');
+  document.getElementById('announceClose').addEventListener('click', () => {
+    document.getElementById('announceBar').classList.remove('show');
+    try { sessionStorage.setItem('announceDismissed', data.text); } catch(e){}
+  });
+}
+
+async function loadAnnouncement(){
+  try {
+    const res = await fetch('content/announcement.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    showAnnouncement(data); // CMS-managed banner
+  } catch (err) {
+    showAnnouncement(ANNOUNCE_FALLBACK); // built-in banner for single-file version
+  }
+}
+loadAnnouncement();
+
+/* Business settings (phone, Instagram, order links) from content/settings.json */
+const SETTINGS_FALLBACK = {
+  phone: "689-350-1469",
+  instagram: "https://www.instagram.com/tuttoexquisitocaffe",
+  order_url: "https://order.toasttab.com/online/tutto-exquisito-caffe-5200-west-irlo-bronson-memorial-highway?utm_campaign=marketing-hub-flyer&diningOption=pickup&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleAS0mqhwZG9mAmV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp8AmSg2iV7-CKODbQ3yNTdB6N0aL_1uJcq4WiHdf78CLQgTht3Oi1GAo6Vm3_aem_U6jK_5EeJ8wS-WSOxMqqDA&utm_id=97760_v0_s00_e0_tv3",
+  directions_url: "https://www.google.com/maps/search/?api=1&query=Tutto+Exquisito+5200+W+Irlo+Bronson+Memorial+Hwy+Kissimmee+FL+34746"
+};
+
+function applySettings(s){
+  // Click-to-call phone
+  if (s.phone) {
+    const p = document.getElementById('phoneLink');
+    document.getElementById('phoneText').textContent = s.phone;
+    p.href = 'tel:' + s.phone.replace(/[^\d+]/g, '');
+    p.classList.remove('hidden');
+  }
+
+  // Instagram in the footer
+  if (s.instagram) {
+    const ig = document.getElementById('instaLink');
+    ig.href = s.instagram;
+    ig.classList.remove('hidden');
+    document.getElementById('instaDot').classList.remove('hidden');
+  }
+
+  // Point every Order / Directions button at the real links
+  if (s.order_url) {
+    document.querySelectorAll('.js-order').forEach(a => a.href = s.order_url);
+  }
+  if (s.directions_url) {
+    document.querySelectorAll('.js-directions').forEach(a => a.href = s.directions_url);
+  }
+}
+
+async function loadSettings(){
+  applySettings(SETTINGS_FALLBACK); // always works, even with no content folder
+  try {
+    const res = await fetch('content/settings.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const s = await res.json();
+    applySettings(s); // CMS-managed values override when present
+  } catch (err) {
+    console.info('Settings file not found — using built-in links. This is normal for the single-file version.');
+  }
+}
+loadSettings();
+
+/* If the Google Map embed can't load (e.g. opened from disk, or blocked),
+   show a tappable address card instead of a blank box. */
+(function(){
+  const wrap = document.querySelector('.map-wrap');
+  const frame = document.getElementById('mapEmbed');
+  if(!wrap || !frame) return;
+  let loaded = false;
+  frame.addEventListener('load', () => { loaded = true; });
+  // If it hasn't fired 'load' shortly after page load, assume it's blank
+  setTimeout(() => { if(!loaded) wrap.classList.add('no-map'); }, 2500);
+  // file:// pages can't load the iframe at all — show fallback immediately
+  if(location.protocol === 'file:') wrap.classList.add('no-map');
+})();
+
+/* =========================================================
+   3. UI EXTRAS (ticker, mobile nav, scroll reveal)
+   ========================================================= */
+const track = document.getElementById('tickerTrack');
+track.innerHTML += track.innerHTML;
+
+const toggle = document.getElementById('menuToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', () => {
+  const open = links.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', open);
+  toggle.textContent = open ? '✕' : '☰';
+});
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, { threshold: .15 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
