@@ -1,43 +1,15 @@
- ============================================================
-# Decap CMS configuration — Tutto Exquisito
-# Dashboard lives at:  yoursite.com/admin
-# Docs: https://decapcms.org/docs/
-#
-# HOSTING: Netlify (site connected to a GitHub repo)
-# Setup in the Netlify dashboard:
-#   1. Site configuration -> Identity -> Enable Identity
-#   2. Identity -> Registration -> set to "Invite only"
-#   3. Identity -> Services -> Enable Git Gateway
-#   4. Identity tab -> Invite users -> your email (and later, the owner's)
-# ============================================================
-
 backend:
   name: git-gateway
-  branch: main   # change to master if your repo uses master
+  branch: main
 
-  # --- Alternative (Vercel hosting): add these three lines and
-  # set them up at https://decapbridge.com —
-  # repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME
-  # identity_url: https://auth.decapbridge.com/sites/YOUR_SITE_ID
-  # gateway_url: https://gateway.decapbridge.com
-
-# Required by Decap even if you don't upload images yet
 media_folder: "tutto-exquisito-netlify/images/uploads"
 public_folder: "/images/uploads"
-
-# Optional: adds a "Save draft -> Review -> Publish" workflow
-# publish_mode: editorial_workflow
 
 collections:
   - name: "site"
     label: "Site Content"
     files:
 
-      # ------------------------------------------------------
-      # MENU  ->  content/menu.json
-      # Edit drink/dish names, descriptions, prices, badges.
-      # Drag items to reorder them on the site.
-      # ------------------------------------------------------
       - name: "menu"
         label: "Menu (drinks & food)"
         file: "tutto-exquisito-netlify/content/menu.json"
@@ -99,9 +71,6 @@ collections:
                     choose_url: false
                     hint: "A photo of this dish, shown at the top of its menu card. Use JPG or PNG under 1 MB — leave empty for a text-only card."
 
-      # ------------------------------------------------------
-      # SHOP HOURS  ->  content/hours.json
-      # ------------------------------------------------------
       - name: "hours"
         label: "Shop Hours"
         file: "tutto-exquisito-netlify/content/hours.json"
@@ -130,10 +99,6 @@ collections:
                 widget: "string"
                 hint: "e.g. 7 AM – 9 PM, or 'Closed'"
 
-      # ------------------------------------------------------
-      # ANNOUNCEMENT BANNER  ->  content/announcement.json
-      # A message bar at the very top of the site.
-      # ------------------------------------------------------
       - name: "announcement"
         label: "Announcement Banner"
         file: "tutto-exquisito-netlify/content/announcement.json"
@@ -160,10 +125,6 @@ collections:
             default: ""
             hint: "Full URL, e.g. https://order.toasttab.com/..."
 
-      # ------------------------------------------------------
-      # BUSINESS SETTINGS  ->  content/settings.json
-      # Phone, Instagram, and real ordering links.
-      # ------------------------------------------------------
       - name: "settings"
         label: "Business Settings"
         file: "tutto-exquisito-netlify/content/settings.json"
