@@ -4,85 +4,387 @@
       "id": "empanadas",
       "label": "Empanadas",
       "items": [
-        { "name": "Beef Empanada", "subtitle": "", "description": "Hand-folded Argentine-style empanada filled with savory seasoned beef, baked golden. A local favorite.", "price": "$4.99", "badge": "Local favorite", "link": "" },
-        { "name": "Chicken Empanada", "subtitle": "", "description": "Hand-folded Argentine-style empanada filled with tender seasoned chicken, baked golden.", "price": "$4.99", "badge": "", "link": "" },
-        { "name": "Ham and Cheese Empanada", "subtitle": "", "description": "Flaky baked empanada filled with savory ham and melted cheese.", "price": "$4.99", "badge": "", "link": "" }
+        {
+          "name": "Beef Empanada",
+          "subtitle": "",
+          "description": "Hand-folded Argentine-style empanada filled with savory seasoned beef, baked golden. A local favorite.",
+          "price": "$4.99",
+          "badge": "Local favorite",
+          "link": "",
+          "image": "/images/uploads/screenshot-2026-07-05-142912.png"
+        },
+        {
+          "name": "Chicken Empanada",
+          "subtitle": "",
+          "description": "Hand-folded Argentine-style empanada filled with tender seasoned chicken, baked golden.",
+          "price": "$4.99",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Ham and Cheese Empanada",
+          "subtitle": "",
+          "description": "Flaky baked empanada filled with savory ham and melted cheese.",
+          "price": "$4.99",
+          "badge": "",
+          "link": ""
+        }
       ]
     },
     {
       "id": "croissants",
       "label": "Croissants",
       "items": [
-        { "name": "Croissant Royale", "subtitle": "Ham & Provolone", "description": "Flaky, buttery croissant filled with savory ham and melted provolone cheese, baked to golden perfection.", "price": "$7.50", "badge": "", "link": "" },
-        { "name": "Croissant Bellissimo", "subtitle": "Brie & Prosciutto", "description": "Buttery croissant layered with creamy brie cheese, delicate prosciutto and sweet peach jam, finished with a touch of elegance in every bite.", "price": "$7.50", "badge": "Guest favorite", "link": "" },
-        { "name": "Croissant Capri", "subtitle": "Caprese", "description": "Fresh mozzarella, ripe tomato, basil pesto and balsamic glaze on a golden croissant.", "price": "$7.50", "badge": "Vegetarian", "link": "" },
-        { "name": "Croissant Sunrise", "subtitle": "Egg, Bacon & Cheese", "description": "Buttery croissant filled with fluffy scrambled eggs, crispy bacon and melted cheese for the perfect morning indulgence.", "price": "$7.50", "badge": "Breakfast pick", "link": "" },
-        { "name": "Plain Croissant", "subtitle": "", "description": "Simple, buttery and baked golden — lovely with any coffee.", "price": "$4.00", "badge": "", "link": "" },
-        { "name": "Dulce de Leche Croissant", "subtitle": "", "description": "Drizzled with icing and almonds, filled with silky dulce de leche.", "price": "$2.50", "badge": "", "link": "" }
+        {
+          "name": "Croissant Royale",
+          "subtitle": "Ham & Provolone",
+          "description": "Flaky, buttery croissant filled with savory ham and melted provolone cheese, baked to golden perfection.",
+          "price": "$7.50",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Croissant Bellissimo",
+          "subtitle": "Brie & Prosciutto",
+          "description": "Buttery croissant layered with creamy brie cheese, delicate prosciutto and sweet peach jam, finished with a touch of elegance in every bite.",
+          "price": "$7.50",
+          "badge": "Guest favorite",
+          "link": ""
+        },
+        {
+          "name": "Croissant Capri",
+          "subtitle": "Caprese",
+          "description": "Fresh mozzarella, ripe tomato, basil pesto and balsamic glaze on a golden croissant.",
+          "price": "$7.50",
+          "badge": "Vegetarian",
+          "link": ""
+        },
+        {
+          "name": "Croissant Sunrise",
+          "subtitle": "Egg, Bacon & Cheese",
+          "description": "Buttery croissant filled with fluffy scrambled eggs, crispy bacon and melted cheese for the perfect morning indulgence.",
+          "price": "$7.50",
+          "badge": "Breakfast pick",
+          "link": ""
+        },
+        {
+          "name": "Plain Croissant",
+          "subtitle": "",
+          "description": "Simple, buttery and baked golden — lovely with any coffee.",
+          "price": "$4.00",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Dulce de Leche Croissant",
+          "subtitle": "",
+          "description": "Drizzled with icing and almonds, filled with silky dulce de leche.",
+          "price": "$2.50",
+          "badge": "",
+          "link": ""
+        }
       ]
     },
     {
       "id": "paninis",
       "label": "Paninis, Flatbreads & Toasts",
       "items": [
-        { "name": "Panini Classico", "subtitle": "Ham, Cheese & Butter", "description": "Warm ciabatta bread pressed to perfection, filled with savory ham, creamy melted cheese and a touch of rich butter.", "price": "$7.50", "badge": "", "link": "" },
-        { "name": "Panini Capri", "subtitle": "Caprese", "description": "Fresh mozzarella, ripe tomato slices, fragrant basil pesto and a drizzle of balsamic glaze pressed inside golden ciabatta bread.", "price": "$9.50", "badge": "Vegetarian", "link": "" },
-        { "name": "Panini Toscana", "subtitle": "Honey Mustard Chicken", "description": "Grilled chicken breast, tangy honey mustard, melted provolone cheese and fresh mixed greens pressed in artisanal ciabatta bread.", "price": "$11.50", "badge": "", "link": "" },
-        { "name": "Flatbread Caesar", "subtitle": "Grilled Chicken", "description": "Warm flatbread filled with tender grilled chicken breast, crisp lettuce, shaved parmesan and creamy Caesar dressing for a fresh, flavorful bite.", "price": "$9.90", "badge": "", "link": "" },
-        { "name": "Avocado Elegance", "subtitle": "", "description": "Whole avocado, half smashed and half sliced, served on artisanal toast with boiled egg, fresh arugula, everything-bagel seeds and a drizzle of rich balsamic glaze.", "price": "$9.90", "badge": "Vegetarian", "link": "" }
+        {
+          "name": "Panini Classico",
+          "subtitle": "Ham, Cheese & Butter",
+          "description": "Warm ciabatta bread pressed to perfection, filled with savory ham, creamy melted cheese and a touch of rich butter.",
+          "price": "$7.50",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Panini Capri",
+          "subtitle": "Caprese",
+          "description": "Fresh mozzarella, ripe tomato slices, fragrant basil pesto and a drizzle of balsamic glaze pressed inside golden ciabatta bread.",
+          "price": "$9.50",
+          "badge": "Vegetarian",
+          "link": ""
+        },
+        {
+          "name": "Panini Toscana",
+          "subtitle": "Honey Mustard Chicken",
+          "description": "Grilled chicken breast, tangy honey mustard, melted provolone cheese and fresh mixed greens pressed in artisanal ciabatta bread.",
+          "price": "$11.50",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Flatbread Caesar",
+          "subtitle": "Grilled Chicken",
+          "description": "Warm flatbread filled with tender grilled chicken breast, crisp lettuce, shaved parmesan and creamy Caesar dressing for a fresh, flavorful bite.",
+          "price": "$9.90",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Avocado Elegance",
+          "subtitle": "",
+          "description": "Whole avocado, half smashed and half sliced, served on artisanal toast with boiled egg, fresh arugula, everything-bagel seeds and a drizzle of rich balsamic glaze.",
+          "price": "$9.90",
+          "badge": "Vegetarian",
+          "link": ""
+        }
       ]
     },
     {
       "id": "pizza",
       "label": "Pizza",
       "items": [
-        { "name": "Pizza Classica", "subtitle": "Cheese", "description": "Simple yet irresistible — crispy flatbread with velvety tomato sauce and a generous layer of melted mozzarella cheese.", "price": "$10.99", "badge": "Vegetarian", "link": "" },
-        { "name": "Pizza Diavolo", "subtitle": "Pepperoni", "description": "Golden flatbread layered with rich tomato sauce, creamy mozzarella and spicy pepperoni slices for a bold, classic flavor.", "price": "$11.99", "badge": "", "link": "" },
-        { "name": "Pizza Parma", "subtitle": "Prosciutto & Arugula", "description": "Crisp flatbread topped with fresh mozzarella, savory prosciutto, peppery arugula and a drizzle of rich balsamic glaze over tomato sauce.", "price": "$12.99", "badge": "", "link": "" },
-        { "name": "Pizza Argentina", "subtitle": "Ham, Egg & Corn", "description": "A hearty flatbread with tomato sauce, melted mozzarella, tender ham, sliced boiled egg and sweet golden corn for a true South American touch.", "price": "$11.99", "badge": "", "link": "" }
+        {
+          "name": "Pizza Classica",
+          "subtitle": "Cheese",
+          "description": "Simple yet irresistible — crispy flatbread with velvety tomato sauce and a generous layer of melted mozzarella cheese.",
+          "price": "$10.99",
+          "badge": "Vegetarian",
+          "link": ""
+        },
+        {
+          "name": "Pizza Diavolo",
+          "subtitle": "Pepperoni",
+          "description": "Golden flatbread layered with rich tomato sauce, creamy mozzarella and spicy pepperoni slices for a bold, classic flavor.",
+          "price": "$11.99",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Pizza Parma",
+          "subtitle": "Prosciutto & Arugula",
+          "description": "Crisp flatbread topped with fresh mozzarella, savory prosciutto, peppery arugula and a drizzle of rich balsamic glaze over tomato sauce.",
+          "price": "$12.99",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Pizza Argentina",
+          "subtitle": "Ham, Egg & Corn",
+          "description": "A hearty flatbread with tomato sauce, melted mozzarella, tender ham, sliced boiled egg and sweet golden corn for a true South American touch.",
+          "price": "$11.99",
+          "badge": "",
+          "link": ""
+        }
       ]
     },
     {
       "id": "mains",
       "label": "Mains & Salads",
       "items": [
-        { "name": "Tutto Burguer", "subtitle": "", "description": "Our signature house burger with melted cheddar, crispy bacon, pickles and fresh greens on a toasted brioche bun, served with seasoned fries.", "price": "$12.99", "badge": "Signature", "link": "" },
-        { "name": "Cesar Royale", "subtitle": "", "description": "Crisp romaine lettuce tossed with grilled chicken, crispy bacon, shaved parmesan and crunchy croutons, finished with our signature Caesar dressing.", "price": "$12.99", "badge": "", "link": "" },
-        { "name": "Mediterranean Bloom", "subtitle": "", "description": "A vibrant mix of fresh greens, strawberries, cherry tomatoes, feta, toasted almonds and balsamic glaze — light, bright and refreshing.", "price": "$13.99", "badge": "Vegetarian", "link": "" }
+        {
+          "name": "Tutto Burguer",
+          "subtitle": "",
+          "description": "Our signature house burger with melted cheddar, crispy bacon, pickles and fresh greens on a toasted brioche bun, served with seasoned fries.",
+          "price": "$12.99",
+          "badge": "Signature",
+          "link": ""
+        },
+        {
+          "name": "Cesar Royale",
+          "subtitle": "",
+          "description": "Crisp romaine lettuce tossed with grilled chicken, crispy bacon, shaved parmesan and crunchy croutons, finished with our signature Caesar dressing.",
+          "price": "$12.99",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Mediterranean Bloom",
+          "subtitle": "",
+          "description": "A vibrant mix of fresh greens, strawberries, cherry tomatoes, feta, toasted almonds and balsamic glaze — light, bright and refreshing.",
+          "price": "$13.99",
+          "badge": "Vegetarian",
+          "link": ""
+        }
       ]
     },
     {
       "id": "smoothies",
       "label": "Smoothies",
       "items": [
-        { "name": "Strawberry Banana Smoothie", "subtitle": "", "description": "A creamy blend of ripe strawberries and banana. Add a scoop of whey protein for +$1.25.", "price": "$7.99", "badge": "", "link": "" },
-        { "name": "Wild Berries Smoothie", "subtitle": "", "description": "Blackberry, blueberry and mixed berries blended smooth and topped with cream. Add a scoop of whey protein for +$1.25.", "price": "$7.99", "badge": "", "link": "" },
-        { "name": "Tropical Smoothie", "subtitle": "", "description": "Mango, pineapple and coconut blended into a creamy tropical escape.", "price": "$7.99", "badge": "", "link": "" },
-        { "name": "Pina Colada Smoothie", "subtitle": "", "description": "Pineapple and coconut blended into a smooth, refreshing classic.", "price": "$7.99", "badge": "", "link": "" }
+        {
+          "name": "Strawberry Banana Smoothie",
+          "subtitle": "",
+          "description": "A creamy blend of ripe strawberries and banana. Add a scoop of whey protein for +$1.25.",
+          "price": "$7.99",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Wild Berries Smoothie",
+          "subtitle": "",
+          "description": "Blackberry, blueberry and mixed berries blended smooth and topped with cream. Add a scoop of whey protein for +$1.25.",
+          "price": "$7.99",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Tropical Smoothie",
+          "subtitle": "",
+          "description": "Mango, pineapple and coconut blended into a creamy tropical escape.",
+          "price": "$7.99",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Pina Colada Smoothie",
+          "subtitle": "",
+          "description": "Pineapple and coconut blended into a smooth, refreshing classic.",
+          "price": "$7.99",
+          "badge": "",
+          "link": ""
+        }
       ]
     },
     {
       "id": "desserts",
       "label": "Desserts & Sips",
       "items": [
-        { "name": "Starbucks Drinks", "subtitle": "", "description": "Proudly serving Starbucks — espresso, frappuccinos, refreshers, iced teas and seasonal favorites. Tap to view the full Starbucks menu.", "price": "View menu", "badge": "", "link": "https://www.starbucks.com/menu" },
-        { "name": "Red Velvet Cake", "subtitle": "", "description": "Moist crimson sponge layered with smooth cream cheese frosting, offering a perfect balance of sweetness and a hint of cocoa.", "price": "$10.00", "badge": "", "link": "" },
-        { "name": "Limoncello Cake", "subtitle": "", "description": "Light and airy lemon sponge cake infused with fresh limoncello, layered with silky cream and topped with candied lemon slices.", "price": "$10.00", "badge": "", "link": "" },
-        { "name": "Chocolate Tuxedo Bombe", "subtitle": "", "description": "A show-stopping chocolate sphere with silky chocolate mousse, finished with elegant white chocolate drizzle.", "price": "$10.00", "badge": "", "link": "" },
-        { "name": "Chocolate Mousse Cake", "subtitle": "", "description": "Layers of cookies-and-cream mousse over a chocolate base, topped with crunchy Oreo pieces for a delightful texture.", "price": "$10.00", "badge": "", "link": "" },
-        { "name": "Lemon Berry Cream Mascarpone", "subtitle": "", "description": "Delicate layers of lemon and berry cream mascarpone with white chocolate curls — bright, creamy and elegant.", "price": "$10.00", "badge": "", "link": "" },
-        { "name": "Carrot Cake", "subtitle": "", "description": "Moist layers of spiced carrot cake with a hint of walnuts, topped with creamy orange cream cheese frosting and candied carrot shavings.", "price": "$4.50", "badge": "", "link": "" },
-        { "name": "Gluten-Free Chocolate Cake", "subtitle": "", "description": "Rich and indulgent chocolate cake made without gluten, featuring a moist texture and deep cocoa flavor, finished with a smooth chocolate frosting.", "price": "$5.50", "badge": "Gluten-free", "link": "" },
-        { "name": "Red Mickey Mouse Macarons", "subtitle": "", "description": "Delicate almond meringue cookies shaped like iconic character faces, with a silky red raspberry ganache filling.", "price": "$4.50", "badge": "", "link": "" },
-        { "name": "Green Dubai Mickey Mouse Macarons", "subtitle": "", "description": "Whimsical pistachio-flavored character macarons with a delicate pistachio cream center.", "price": "$4.50", "badge": "", "link": "" },
-        { "name": "Oreo Mickey Mouse Macarons", "subtitle": "", "description": "Character-shaped macarons with a smooth cookies-and-cream filling for a playful, indulgent treat.", "price": "$4.50", "badge": "", "link": "" },
-        { "name": "Argentine Alfajor – Chocolate", "subtitle": "", "description": "Traditional Argentine shortbread cookie filled with creamy dulce de leche and coated in rich chocolate.", "price": "$3.00", "badge": "", "link": "" },
-        { "name": "Argentine Alfajor – White Chocolate", "subtitle": "", "description": "Classic Argentine shortbread cookie with smooth dulce de leche filling, enrobed in silky white chocolate.", "price": "$3.00", "badge": "", "link": "" },
-        { "name": "Blueberry Muffin", "subtitle": "", "description": "Tender muffin bursting with plump blueberries, baked until golden with a perfect crumb.", "price": "$3.50", "badge": "", "link": "" },
-        { "name": "Corn Muffin", "subtitle": "", "description": "Soft and fluffy golden muffin infused with sweet vanilla, offering a delicate aroma and classic flavor in every bite.", "price": "$3.50", "badge": "", "link": "" },
-        { "name": "Chocolate Muffin", "subtitle": "", "description": "Rich and decadent muffin loaded with chocolate throughout, offering deep cocoa satisfaction.", "price": "$3.50", "badge": "", "link": "" },
-        { "name": "Banana Nut Muffin", "subtitle": "", "description": "Classic muffin made with ripe bananas and toasted nuts for a warm, comforting flavor.", "price": "$3.00", "badge": "", "link": "" },
-        { "name": "Forks, Cups or Plates", "subtitle": "", "description": "Extra serviceware for sharing back at your room or picnic table.", "price": "$1.50", "badge": "", "link": "" }
+        {
+          "name": "Starbucks Drinks",
+          "subtitle": "",
+          "description": "Proudly serving Starbucks — espresso, frappuccinos, refreshers, iced teas and seasonal favorites. Tap to view the full Starbucks menu.",
+          "price": "View menu",
+          "badge": "",
+          "link": "https://www.starbucks.com/menu"
+        },
+        {
+          "name": "Red Velvet Cake",
+          "subtitle": "",
+          "description": "Moist crimson sponge layered with smooth cream cheese frosting, offering a perfect balance of sweetness and a hint of cocoa.",
+          "price": "$10.00",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Limoncello Cake",
+          "subtitle": "",
+          "description": "Light and airy lemon sponge cake infused with fresh limoncello, layered with silky cream and topped with candied lemon slices.",
+          "price": "$10.00",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Chocolate Tuxedo Bombe",
+          "subtitle": "",
+          "description": "A show-stopping chocolate sphere with silky chocolate mousse, finished with elegant white chocolate drizzle.",
+          "price": "$10.00",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Chocolate Mousse Cake",
+          "subtitle": "",
+          "description": "Layers of cookies-and-cream mousse over a chocolate base, topped with crunchy Oreo pieces for a delightful texture.",
+          "price": "$10.00",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Lemon Berry Cream Mascarpone",
+          "subtitle": "",
+          "description": "Delicate layers of lemon and berry cream mascarpone with white chocolate curls — bright, creamy and elegant.",
+          "price": "$10.00",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Carrot Cake",
+          "subtitle": "",
+          "description": "Moist layers of spiced carrot cake with a hint of walnuts, topped with creamy orange cream cheese frosting and candied carrot shavings.",
+          "price": "$4.50",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Gluten-Free Chocolate Cake",
+          "subtitle": "",
+          "description": "Rich and indulgent chocolate cake made without gluten, featuring a moist texture and deep cocoa flavor, finished with a smooth chocolate frosting.",
+          "price": "$5.50",
+          "badge": "Gluten-free",
+          "link": ""
+        },
+        {
+          "name": "Red Mickey Mouse Macarons",
+          "subtitle": "",
+          "description": "Delicate almond meringue cookies shaped like iconic character faces, with a silky red raspberry ganache filling.",
+          "price": "$4.50",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Green Dubai Mickey Mouse Macarons",
+          "subtitle": "",
+          "description": "Whimsical pistachio-flavored character macarons with a delicate pistachio cream center.",
+          "price": "$4.50",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Oreo Mickey Mouse Macarons",
+          "subtitle": "",
+          "description": "Character-shaped macarons with a smooth cookies-and-cream filling for a playful, indulgent treat.",
+          "price": "$4.50",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Argentine Alfajor – Chocolate",
+          "subtitle": "",
+          "description": "Traditional Argentine shortbread cookie filled with creamy dulce de leche and coated in rich chocolate.",
+          "price": "$3.00",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Argentine Alfajor – White Chocolate",
+          "subtitle": "",
+          "description": "Classic Argentine shortbread cookie with smooth dulce de leche filling, enrobed in silky white chocolate.",
+          "price": "$3.00",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Blueberry Muffin",
+          "subtitle": "",
+          "description": "Tender muffin bursting with plump blueberries, baked until golden with a perfect crumb.",
+          "price": "$3.50",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Corn Muffin",
+          "subtitle": "",
+          "description": "Soft and fluffy golden muffin infused with sweet vanilla, offering a delicate aroma and classic flavor in every bite.",
+          "price": "$3.50",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Chocolate Muffin",
+          "subtitle": "",
+          "description": "Rich and decadent muffin loaded with chocolate throughout, offering deep cocoa satisfaction.",
+          "price": "$3.50",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Banana Nut Muffin",
+          "subtitle": "",
+          "description": "Classic muffin made with ripe bananas and toasted nuts for a warm, comforting flavor.",
+          "price": "$3.00",
+          "badge": "",
+          "link": ""
+        },
+        {
+          "name": "Forks, Cups or Plates",
+          "subtitle": "",
+          "description": "Extra serviceware for sharing back at your room or picnic table.",
+          "price": "$1.50",
+          "badge": "",
+          "link": ""
+        }
       ]
     }
   ]
