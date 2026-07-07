@@ -247,6 +247,11 @@ section[id],aside[id]{scroll-margin-top:84px}
 .panel.active{display:grid;grid-template-columns:1fr 1fr;gap:14px 56px}
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .dish{padding:22px 0;border-bottom:1px solid rgba(246,239,228,.14)}
+.dish-img{
+  width:100%;height:170px;object-fit:cover;display:block;
+  border-radius:calc(var(--radius) - 6px);margin-bottom:14px;
+  border:1px solid var(--hairline);
+}
 .dish-top{display:flex;align-items:baseline;gap:12px}
 .dish h3{font-size:21px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dish h3 small{font-family:'Jost',sans-serif;font-size:13px;font-weight:400;color:var(--muted);letter-spacing:.04em}
@@ -624,8 +629,8 @@ section[id],aside[id]{scroll-margin-top:84px}
 <!-- CTA -->
 <section class="cta">
   <div class="wrap">
-    <h2>Your table is <em>waiting.</em></h2>
-    <p>Skip the theme-park lines for breakfast. Golden croissants, Argentine empanadas and your favorite Starbucks drink — served with passion and artistry.</p>
+    <h2>Come savor <em>something special.</em></h2>
+<p>Golden croissants, Argentine empanadas and your favorite Starbucks drink — served with passion and artistry, right off Irlo Bronson.</p>
     <div class="cta-btns">
       <a class="btn btn-primary js-order" href="https://www.google.com/maps/search/?api=1&query=Tutto+Exquisito+Kissimmee+order" target="_blank" rel="noopener">Order online</a>
       <a class="btn btn-ghost js-directions" href="https://www.google.com/maps/search/?api=1&query=Tutto+Exquisito+5200+W+Irlo+Bronson+Memorial+Hwy+Kissimmee+FL+34746" target="_blank" rel="noopener">Get directions</a>
@@ -783,6 +788,7 @@ function renderMenu(data){
 
     panel.innerHTML = cat.items.map(item => {
       const inner = `
+        ${item.image ? '<img class="dish-img" src="' + esc(item.image) + '" alt="' + esc(item.name) + '" loading="lazy" onerror="this.remove()">' : ''}
         <div class="dish-top">
           <h3>${esc(item.name)}${item.subtitle ? ' <small>' + esc(item.subtitle) + '</small>' : ''}</h3>
           <span class="leader"></span>
