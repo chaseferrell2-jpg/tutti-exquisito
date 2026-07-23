@@ -5,13 +5,13 @@
       "label": "Empanadas",
       "items": [
         {
-          "name": "Chicken empanadas ",
+          "name": "Beef empanadas ",
           "subtitle": "",
           "description": "Hand-folded Argentine-style empanada filled with savory seasoned beef, baked golden. A local favorite.",
           "price": "$4.99",
           "badge": "Local favorite",
           "link": "",
-          "image": "/images/uploads/img_0913.jpeg"
+          "image": ""
         },
         {
           "name": "Chicken Empanada",
