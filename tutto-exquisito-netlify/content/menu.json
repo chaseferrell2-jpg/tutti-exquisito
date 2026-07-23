@@ -386,21 +386,6 @@
           "link": ""
         }
       ]
-    },
-    {
-      "id": "bevs",
-      "label": "Beverages",
-      "items": [
-        {
-          "subtitle": "",
-          "description": "",
-          "badge": "Healthy!",
-          "link": "",
-          "image": "",
-          "name": "Water ",
-          "price": "$100"
-        }
-      ]
     }
   ]
 }
