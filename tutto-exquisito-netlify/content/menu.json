@@ -5,13 +5,13 @@
       "label": "Empanadas",
       "items": [
         {
-          "name": "Micheal Myers",
+          "name": "Beef Empanadas",
           "subtitle": "",
           "description": "Hand-folded Argentine-style empanada filled with savory seasoned beef, baked golden. A local favorite.",
           "price": "$4.99",
           "badge": "Local favorite",
           "link": "",
-          "image": "/images/uploads/—pngtree—250th-anniversary-usa-1776-250_23907284.png"
+          "image": ""
         },
         {
           "name": "Chicken Empanada",
